@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-export const config = { runtime: "node" };
+export const config = { runtime: "nodejs" };
 export const revalidate = 0;
 
 async function Product({ data }) {
