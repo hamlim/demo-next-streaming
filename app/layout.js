@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 
 // whitespace
@@ -10,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html data-theme="emerald" lang="en">
-      <body>{children}</body>
+      <body>
+        <Link href="/node">Node</Link>
+        <Link href="/">Edge</Link>
+        {children}
+      </body>
     </html>
   );
 }

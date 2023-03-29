@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-export const config = { runtime: "edge" };
+export const config = { runtime: "node" };
 export const revalidate = 0;
 
 async function Product({ data }) {
@@ -31,6 +31,7 @@ async function Product({ data }) {
 export default async function Web() {
   return (
     <div>
+      <h1 className="text-3xl font-bold underline text-purple-700">Web</h1>
       <Product
         data={fetch(`https://app-dir.vercel.app/api/products?id=1&delay=400`, {
           cache: "no-store",
