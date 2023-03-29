@@ -33,34 +33,34 @@ export default async function Web() {
     <div>
       <h1 className="text-3xl font-bold underline text-purple-700">Web</h1>
       <Product
-        data={fetch(`https://app-dir.vercel.app/api/products?id=1&delay=400`, {
+        data={fetch(`https://app-dir.vercel.app/api/products?id=1&delay=100`, {
           cache: "no-store",
         })}
       />
-      <Suspense fallback={<p>Loading Product 2 (3s)...</p>}>
+      <Suspense fallback={<p>Loading Product 2 (1s)...</p>}>
         <Product
           data={fetch(
-            `https://app-dir.vercel.app/api/products?id=2&delay=3000`,
+            `https://app-dir.vercel.app/api/products?id=2&delay=1000`,
             {
               cache: "no-store",
             }
           )}
         />
       </Suspense>
-      <Suspense fallback={<p>Loading Product 3 (5s)...</p>}>
+      <Suspense fallback={<p>Loading Product 3 (2s)...</p>}>
         <Product
           data={fetch(
-            `https://app-dir.vercel.app/api/products?id=3&delay=5000`,
+            `https://app-dir.vercel.app/api/products?id=3&delay=2000`,
             {
               cache: "no-store",
             }
           )}
         />
       </Suspense>
-      <Suspense fallback={<p>Loading Product 4 (10s)...</p>}>
+      <Suspense fallback={<p>Loading Product 4 (5s)...</p>}>
         <Product
           data={fetch(
-            `https://app-dir.vercel.app/api/products?id=4&delay=10000`,
+            `https://app-dir.vercel.app/api/products?id=4&delay=5000`,
             {
               cache: "no-store",
             }
